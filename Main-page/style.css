@@ -1,0 +1,247 @@
+ body
+ {
+   color: white;
+   background-color: black;
+   padding: 0;
+   margin: 0;
+   font-family: "roboto", sans-serif;
+   /* font-weight: 400; */
+ } 
+
+ .fade-in{
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+} 
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header
+{
+   background: black;
+   margin: 1.5rem 3rem;
+   justify-content: space-between;
+   text-decoration: none;
+   display: flex;
+   flex-direction: row;
+   position: sticky;
+   top: 0rem ; 
+   z-index: 1;
+}
+
+.logo{
+   font-family: "Permanent Marker", cursive;
+   margin: 0.25rem;
+
+   animation-name: zoom-in;
+   animation-duration:  1.8s;
+   animation-play-state: paused;
+}
+.logo:hover{
+   animation-play-state: running;
+   animation-iteration-count: infinite;
+}
+@keyframes zoom-in {
+   0%{
+       transform: scale(1);
+   }
+   50%{
+       transform: scale(1.5);
+       rotate: -8deg;
+   }
+   100%{
+       transform: scale(1);
+   }
+}  
+
+a,h1,p{
+   cursor: pointer;
+   text-decoration: none;
+   color: white;
+}
+
+a:hover{
+   
+   transition: all 2s;
+   text-decoration: underline;
+}
+
+.nav-links
+{
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   text-decoration: none;
+   gap: 1.5rem;
+}
+
+#why-choose-us{
+   font-size: 0.8rem;
+}
+
+.sign-up{
+  
+   border: 0.01rem solid rgb(255, 255, 255);
+   color: white;
+   background: transparent;
+   background-image: linear-gradient(to right, black, rgb(59, 59, 59));
+   margin: 1.25rem 0 0 0;
+   height: 1.875rem;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   padding: 1.25rem 1.25rem;
+   border-radius: 0.3125rem;
+   text-decoration: none;
+}
+
+#sec-1{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+}
+
+#headline{
+   font-size: 4rem;
+}
+
+#info{
+   font-size: 1rem;
+   margin: 0rem 9rem;
+}
+
+.explore-btn{
+   margin: 1rem auto;
+   width: 7rem;
+   padding: 10px 0;
+   border: none;
+   border-radius: 5px;
+
+   background-image: linear-gradient(to right, #f0f0f0, #c1c0c0);
+ 
+   color: black;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.explore-btn:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+#car-image{
+   width: 60rem;
+   height: 30rem;
+   margin: 1rem auto;
+
+   animation-name: popup;
+   animation-duration: 1.5s;
+   animation-fill-mode: forwards;
+  
+}
+
+@keyframes popup{
+   0% {
+       transform: scale(0);
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+
+#sec-2{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   
+}
+
+#our-services{
+   font-size: 4rem;
+   margin: 10rem 0 0 2.5rem;
+}
+
+.services-list{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+   text-decoration: none;
+   margin: 4rem 0 0 0;
+}
+
+.service-item{
+   border-radius: 0.5rem;
+   box-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
+   height: 18rem;
+   width: 18rem;
+   padding: 0 2rem; 
+   margin: 0 3rem;
+}
+
+.service-item h3{
+   font-size: 1.5rem;
+   margin: 1.5rem 0 0 0;
+}
+
+.service-item p{
+   font-size: 0.85rem;
+   margin: 1rem 0 0 0;
+}
+
+.service-item img{
+   background: linear-gradient(to right, #191919, #303030);
+   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+   border-radius: 50%;
+   padding: 0.5rem;
+   width: 3rem;
+   height: 3rem;
+   margin: -2rem 0 0 0;
+}
+
+.service-item:hover{
+   transform: scale(1.05);
+   transition: transform 0.3s ease-in-out;
+}
+
+.see-more{
+   margin: 3rem auto;
+   width: 7rem;
+   padding: 10px 0;
+   border: none;
+   border-radius: 5px;
+
+   background-image: linear-gradient(to right, #f0f0f0, #c1c0c0);
+ 
+   color: black;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.buttons{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 12rem;
+}
+
+.nav-arrow img{
+   
+   width: 2rem;
+   height: 2rem;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+}
