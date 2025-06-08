@@ -5,20 +5,10 @@
    padding: 0;
    margin: 0;
    font-family: "roboto", sans-serif;
-   /* font-weight: 400; */
+   
  } 
 
- .fade-in{
-  opacity: 0;
-  transform: translateY(1.25rem);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-} 
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+ 
 .header
 {
    background: black;
@@ -108,15 +98,17 @@ a:hover{
 
 #headline{
    font-size: 4rem;
+   padding: 0;
+   margin: 3rem 0 1rem 0;
 }
 
 #info{
    font-size: 1rem;
-   margin: 0rem 9rem;
+   margin: 0rem 15rem;
 }
 
 .explore-btn{
-   margin: 1rem auto;
+   margin: 3rem auto 0;
    width: 7rem;
    padding: 10px 0;
    border: none;
@@ -137,20 +129,22 @@ a:hover{
 
 #car-image{
    width: 60rem;
-   height: 30rem;
-   margin: 1rem auto;
-
-   animation-name: popup;
-   animation-duration: 1.5s;
+   height: 50rem;
+   margin: -10rem auto;
+   animation-name: popup ;
+   animation-duration: 1.25s;
    animation-fill-mode: forwards;
-  
+   animation-timing-function: ease-in-out;
 }
 
 @keyframes popup{
-   0% {
+   from {
+      opacity: 0.5;
        transform: scale(0);
    }
-   100% {
+
+   to {
+      opacity: 1;
        transform: scale(1);
    }
 }
@@ -170,22 +164,27 @@ a:hover{
 }
 
 .services-list{
+   flex-wrap: wrap;
+   gap: 0.6rem;
    display: flex;
    flex-direction: row;
+   text-align: center;
    justify-content: center;
    align-items: center;
    list-style: none;
    text-decoration: none;
-   margin: 4rem 0 0 0;
+   margin: 6rem 0 0 0;
 }
+
 
 .service-item{
    border-radius: 0.5rem;
+   text-align: center;
    box-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
    height: 18rem;
-   width: 18rem;
+   width: 17rem;
    padding: 0 2rem; 
-   margin: 0 3rem;
+   margin: 0;
 }
 
 .service-item h3{
@@ -209,6 +208,7 @@ a:hover{
 }
 
 .service-item:hover{
+   position: relative;
    transform: scale(1.05);
    transition: transform 0.3s ease-in-out;
 }
@@ -228,20 +228,84 @@ a:hover{
    transition: background-color 0.3s;
 }
 
-.buttons{
+
+#sec-3{
+   margin: 14rem 0 0 0; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+#sec-3 h2{
+   font-size: 3rem;
+   margin: 0 0 2rem 0;
+}
+
+ .popular-cars-header p{
+   font-size: 1rem;
+   margin: 0 20rem;
+} 
+
+.popular-cars{
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   gap: 12rem;
+   list-style: none;
+   text-decoration: none;
+   margin: 4rem 0 0 0;
+}  
+
+.car-item{
+   border-radius: 0.5rem;
+   box-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
+   height: 28rem;
+   width: 25rem;
+   padding: 0; 
+   margin: 0 1rem;
 }
 
-.nav-arrow img{
+.car-item img{
+   object-fit: cover;
+   width: 100%;
+   height: 18rem;
+   border-radius: 0.5rem 0.5rem 0 0;
    
-   width: 2rem;
-   height: 2rem;
-   background-color: transparent;
-   border: none;
-   cursor: pointer;
-   transition: transform 0.3s ease-in-out;
 }
+.car-info h3{
+   padding: 1rem;
+   font-size: 1rem;   
+   margin: 0;
+}
+.car-info{
+   height: 9.75rem;
+   border-radius: 0 0 0.5rem 0.5rem;
+   width: 100%;
+   background: rgb(22, 22, 22);
+}
+.car-info p,h3{
+   padding: 0 1rem;
+   text-align: left;
+}
+
+.learn-more{
+   font-size: 1rem;
+   border: none;
+   padding: 0.75rem 1rem;
+   width: 24rem;
+   border-radius: 5px;
+   box-shadow: 0 0 3px rgba(246, 245, 245, 0.5);
+   background: linear-gradient(to right, #000000, #303030);
+   color: white;
+}
+
+.car-price{
+   display: flex;
+   justify-content: space-between;
+   ;
+}
+
+
+
