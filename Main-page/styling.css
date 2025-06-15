@@ -1,0 +1,74 @@
+body{
+    color: white;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+     font-family: "roboto", sans-serif;
+}
+.header
+{
+   background: black;
+   margin: 1.5rem 3rem;
+   justify-content: space-between;
+   text-decoration: none;
+   display: flex;
+   flex-direction: row;
+   position: sticky;
+   top: 0rem ; 
+   z-index: 1;
+}
+
+.logo{
+   font-family: "Permanent Marker", cursive;
+   margin: 0.25rem;
+}
+
+
+
+a,h1,p{
+   cursor: pointer;
+   text-decoration: none;
+   color: white;
+}
+
+a:hover{
+      
+      transition: all 2s;
+      text-decoration: underline;
+   }
+
+.nav-links
+   {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      text-decoration: none;
+      gap: 1.5rem;
+   }
+
+#why-choose-us{
+      font-size: 0.8rem;
+   }
+
+.sign-up{
+      border: 0.01rem solid rgb(255, 255, 255);
+      color: white;
+      
+      background-image: linear-gradient(to right, black, rgb(59, 59, 59));
+      margin: 1.25rem 0 0 0;
+      height: 1.875rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem 1.25rem;
+      border-radius: 0.3125rem;
+      text-decoration: none;
+   }
+
+#sec-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
