@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    
+        <link rel="stylesheet" href="./CarStyle.css">
+
+    <style>
+        body,header{
+           background:  rgb(254, 245, 245);
+        } 
+        .car-image-container {
+            width: 50%;
+        }
+            
+    </style>
+    <title>Document</title>
+</head>
+<body>
+     <header class="header">
+        <h1 class="logo">NASR</h1>
+
+        <ul class="nav-links">
+            <div class="logo-container">
+                <img src="./Images/PFP.png" alt="Logo" class="logo-img">
+                <p>Guest</p>
+            </div>
+            <li><a href="./About.html" id="why-choose-us">Why choose us ?</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sec-3">Cars</a></li>
+            <li><a href="#sec-2">Services</a></li>
+            <li><a href="#sec-4">Contact</a></li>
+            <li class="sign-li"><a href="./form.html" class="Sign">Sign Up Now</a></li>
+        </ul>
+
+        <a href="./form.html"><button class="sign-up">Sign Up Now</button></a>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="wrapper">
+    <div class="car-info">
+      <h1>Maruti Suzuki Omni Van<br>
+          "Great for traveling with Kids😝"- </h1>
+      <ul>
+        <li>Engine : 3.2L 4-Cylinder Turbo Diesel</li>
+        <li>Power : 197 hp</li>
+        <li>Torque : 470 Nm</li>
+        <li>Transmission : 6-Speed Automatic</li>
+        <li>Drivetrain : Full-Time 4WD</li>
+        <li>0-100 km/h : 6.7 seconds</li>
+        <li>Top Speed : 210 km/h</li>
+      </ul>
+      <button onclick="openForm()">Order Now</button>
+    </div>
+    <div class="car-image-container">
+        <img src="./Images/Omni.png" alt="Ford Endeavour Titanium Plus 3.2 4x4 AT" class="car-image">
+    </div>
+     <div class="popup-form" id="popupForm">
+                     <div class="form-content" id="formContent">
+                        <span class="close-btn" onclick="closeForm()">&times;</span>
+                        <h2>Fill up the required fields :</h2>
+
+
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" placeholder="Enter your Name" required>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="Enter your Email" required>
+                        <label for="location">Location*</label>
+                        <input type="text" id="location" placeholder="Enter your Location" required>
+                        <label for="credit">Debit Card Number*</label>
+                        <input type="text" id="credit" placeholder="XXXX-XXX-XXXX" required>
+
+                        <button onclick="submitForm()">Sent Application</button>
+                        </div>
+
+                       
+                       
+                    
+
+                    <div class="success-content" id="successContent" style="display: none;">
+                        <span class="close-btn" onclick="closeForm()">&times;</span>
+                        <div class="done-icon-container">
+                            <img src="./Images/done-icon.png" alt="">
+                        </div>
+                        <h3> Application Sent!</h3>
+                        <p>Thank you for purchasing from us.<br>We'll get back to you soon.</p>
+                    </div>
+
+
+
+                </div>
+    </div>
+         <script src="./Car.js"></script>
+        <script src="./Nav-Bar.js"></script>
+</body>
+</html>

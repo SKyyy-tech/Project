@@ -25,7 +25,7 @@
 </head>
 
 <body>
- <header class="header">
+    <header class="header">
         <h1 class="logo">NASR</h1>
 
         <ul class="nav-links">
@@ -35,21 +35,21 @@
             </div>
             <li><a href="./About.html" id="why-choose-us">Why choose us ?</a></li>
             <li><a href="index.html">Home</a></li>
-            <li><a href=".html">Products</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <lic= class="sign-li"><a href="./form.html" class="Sign">Sign Up Now</a></li>
+            <li><a href="#sec-3">Cars</a></li>
+            <li><a href="#sec-2">Services</a></li>
+            <li><a href="#sec-4">Contact</a></li>
+            <li class="sign-li"><a href="./form.html" class="Sign">Sign Up Now</a></li>
         </ul>
 
-         <button class="sign-up"><a href="./form.html">Sign Up Now</a></button>
-         
-       <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-       </div>
+        <a href="./form.html"><button class="sign-up">Sign Up Now</button></a>
 
-       
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
     </header>
 
     <main>
@@ -58,194 +58,437 @@
             <p id="info">Step into a world of elegance, power, and prestige. At LuxDrive Motors, we specialize in the
                 finest selection of luxuries cars—where every model is a statement of style, performance, and status.
                 From iconic names like Rolls-Royce, Bentley, and Ferrari to...</p>
-            <button class="explore-btn">Explore Now</button>
-            <div class="car-image-container"> 
-            <img src="./Images/Car3.png" alt="Car" id="car-image">
+            <a href="#sec-3"><button class="explore-btn">Explore Now</button></a>   
+            <div class="car-image-container">
+                <img src="./Images/Car3.png" alt="Car" id="car-image">
             </div>
         </section>
-        <section  id="sec-2"  class="fade-in">
+        <section id="sec-2" class="fade-in">
             <h2 id="our-services">Our Services</h2>
             <p>We offer a wide range of luxury car services designed with your automotive needs in mind, including:</p>
-            
-                <div class="services-list">
-                <div class="service-item"  class="fade-in">
+
+            <div class="services-list">
+                <div class="service-item" class="fade-in">
                     <img src="Images/icon1.png" alt="">
                     <h3>Luxury Car Rentals</h3>
                     <p>Experience the ultimate in luxury with our exclusive car rental service, featuring a fleet of
                         high-end vehicles to suit your every need.</p>
-                    <button class="see-more">See more</button>
+                    <button class="see-more open-btn" onclick="openForm()">Apply For Service</button>
                 </div>
                 <div class="service-item" class="fade-in">
                     <img src="Images/icon4.png" alt="">
                     <h3>Insurance Services</h3>
                     <p>Protect your investment with our comprehensive insurance services, designed to give you peace of
                         mind on the road.</p>
-                    <button class="see-more">See more</button>
+                    <button class="see-more open-btn" onclick="openForm()">Apply For Service</button>
                 </div>
-                <div class="service-item"  class="fade-in">
+                <div class="service-item" class="fade-in">
                     <img src="Images/icon3.png" alt="">
                     <h3>Maintenance Repairs</h3>
                     <p>Keep your luxury car in pristine condition with our expert maintenance and repair services,
                         ensuring optimal performance and longevity.</p>
-                    <button class="see-more">See more</button>
+                    <button class="see-more open-btn" onclick="openForm()">Apply For Service</button>
                 </div>
-                <div class="service-item"  class="fade-in">
+                <div class="service-item" class="fade-in">
                     <img src="Images/icon2.png" alt="">
                     <h3>Car Modifications</h3>
                     <p>Transform your vehicle into a unique masterpiece with our custom car modification services,
                         tailored to your specifications.</p>
-                    <button class="see-more">See more</button>
-                </div>  
+                    <button class="see-more open-btn" onclick="openForm()">Apply For Service</button>
+                </div>
+
+
+                <div class="popup-form" id="popupForm">
+                     <div class="form-content" id="formContent">
+                        <span class="close-btn" onclick="closeForm()">&times;</span>
+                        <h2>Fill up the required fields :</h2>
+
+
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" placeholder="Enter your Name" required>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="Enter your Email" required>
+                        <label for="location">Location*</label>
+                        <input type="text" id="location" placeholder="Enter your Location" required>
+                        <label for="credit">Credit Card Number*</label>
+                        <input type="text" id="credit" placeholder="XXXX-XXX-XXXX" required>
+
+                        <div class="grouper">
+                        <label for="service">Service Required :</label>
+
+                        <select id="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="rental">Luxury Car Rental</option>
+                            <option value="insurance">Insurance Services</option>
+                            <option value="maintenance">Maintenance Repairs</option>
+                            <option value="modifications">Car Modifications</option>
+                        </select>
+                        </div>
+
+                        <div class="grouper">
+                        <label for="car-model">Car Model :</label>
+
+                        <select name="car-model" required>
+                            <option value="">Select a Car Model</option>
+                            <option value="model1">Toyota Land Cruiser J300 Series-</option>
+                            <option value="model2">Ford Endeavour Titanium Plus 3.2 4x4 AT- </option>
+                            <option value="model3">Vortek NX-7 UrbanDrive-  </option>
+                            <option value="model4">Toyota Supra Second Gen A60- </option>
+                            <option value="model5">Chiron Sport "Les Légendes du Ciel"- </option>
+                            <option value="model6">Maruti Suzuki Model 800- </option>
+                            <option value="model7"></option>
+                            <option value="model8"></option>
+                            <option value="model9"></option>
+                        </select>
+                        </div>
+                        <button onclick="submitForm()">Apply For Service</button>
+                    </div>
+
+                    <div class="success-content" id="successContent" style="display: none;">
+                        <span class="close-btn" onclick="closeForm()">&times;</span>
+                        <div class="done-icon-container">
+                            <img src="./Images/done-icon.png" alt="">
+                        </div>
+                        <h3> Application Sent!</h3>
+                        <p>Thank you for purchasing from us.<br>We'll get back to you soon.</p>
+                    </div>
+
+
+
+                </div>
+
+
             </div>
         </section>
-        <section id="sec-3"  class="fade-in">
+        <section id="sec-3" class="fade-in">
             <div class="popular-cars-header">
-            <h2>Popular Bought Cars</h2>
-            <p>Luxury cars are more than just transportation—they're a statement of style, performance, and innovation.
-                Whether rented for a special occasion or bought for daily prestige, these high-end vehicles top the list
-                for their design, comfort, and cutting-edge technology. Here's a look at the most popular luxury cars on
-                the market today.
-            </p>
+                <h2>Popular Bought Cars</h2>
+                <p>Luxury cars are more than just transportation—they're a statement of style, performance, and
+                    innovation.
+                    Whether rented for a special occasion or bought for daily prestige, these high-end vehicles top the
+                    list
+                    for their design, comfort, and cutting-edge technology. Here's a look at the most popular luxury
+                    cars on
+                    the market today.
+                </p>
             </div>
-            <div class="popular-cars">
-                 <div class="car-item"  class="fade-in">
+    <div class="For_popup">
+  <!-- Specifier Buttons -->
+    <div class="specifier-buttons">
+    <button class="active" onclick="showCategory('suv')">SUVs</button>
+    <button onclick="showCategory('sports')">Sports</button>
+    <button onclick="showCategory('electric')">Electric</button>
+    </div>
+
+  <!-- SUV Cards -->
+  <div class="card-section active" id="suv">
+                <div class="car-item fade-in">
                     <div class="car-price offer">
-                        <button>booking now</button>
+                        <button onclick="open_Form()">booking now</button>
+                        <p>10% off</p>
+                    </div>
+                    <img src="./Images/SUV1.png" alt="">
+                    <div class="car-info">
+                        <h3>Toyota Land Cruiser J300 Series- </h3>
+                        <div class="car-price">
+                            <p>Price: $35,000</p>
+                            <p>Color: Grey,Black</p>
+                        </div>
+                        <a href="./Car1.html"><button class="learn-more">Check For Details</button></a>
+                    </div>
+                </div>
+                <div class="car-item fade-in">
+                    <div class="car-price offer">
+                        <button onclick="open_Form()">booking now</button>
+                        <p>15% off</p>
+                    </div>
+                    <img src="./Images/Omni_bg.png" alt="">
+                    <div class="car-info">
+                        <h3>Maruti Suzuki Omni Van- </h3>
+                        <div class="car-price">
+                            <p>Price: $40,000</p>
+                            <p>Color: Grey,Black</p>
+                        </div>
+                       <a href="./Car2.html"><button class="learn-more">Check For Details</button></a>
+                    </div>
+                </div>
+                <div class="car-item fade-in">
+                    <div class="car-price offer">
+                        <button onclick="open_Form()">booking now</button>
+                        <p>20% off</p>
+                    </div>
+                    <img src="./Images/SUV3.png" alt="">
+                    <div class="car-info">
+                        <h3>Vortek NX-7 UrbanDrive- </h3>
+                        <div class="car-price">
+                            <p>Price: $35,000</p>
+                            <p>Color: White,Black</p>
+                        </div>
+                        <a href="./Car3.html"><button class="learn-more">Check For Details</button></a>
+                    </div>
+
+    </div>
+    </div>
+
+  <!-- Sports Car Cards -->
+  <div class="card-section" id="sports">
+   <div class="car-item fade-in">
+                    <div class="car-price offer">
+                        <button onclick="open_Form()">booking now</button>
                         <p>20% off</p>
                     </div>
                     <img src="./Images/Car4.png" alt="">
                     <div class="car-info">
-                        <h3>Maruti Suzuki Model 800- </h3>
+                        <h3>Toyota Supra Second Gen A60- </h3>
                         <div class="car-price">
-                        <p>Price: $35,000</p>
-                        <p>Color: Red,Black</p>
+                            <p>Price: $35,000</p>
+                            <p>Color: Red,Black</p>
                         </div>
-                        <button class="learn-more">Check For More Detail</button>
+                       <a href="./Car4.html"><button class="learn-more">Check For Details</button></a>
                     </div>
                 </div>
-                <div class="car-item"  class="fade-in">
+                <div class="car-item fade-in">
                     <div class="car-price offer">
-                        <button>booking now</button>
+                        <button onclick="open_Form()">booking now</button>
                         <p>20% off</p>
                     </div>
                     <img src="./Images/Car1.png" alt="">
                     <div class="car-info">
-                        <h3>Maruti Suzuki Model 800- </h3>
+                        <h3>Chiron Sport "Les Légendes du Ciel"- </h3>
                         <div class="car-price">
-                        <p>Price: $35,000</p>
-                        <p>Color: Grey,Black</p>
+                            <p>Price: $1,150,000</p>
+                            <p>Color: Grey,Black</p>
                         </div>
-                        <button class="learn-more">Check For More Detail</button>
+                        <a href="./Car5.html"><button class="learn-more">Check For Details</button></a>
                     </div>
                 </div>
-                <div class="car-item"  class="fade-in">
+                <div class="car-item fade-in">
                     <div class="car-price offer">
-                        <button>booking now</button>
+                        <button onclick="open_Form()">booking now</button>
                         <p>20% off</p>
                     </div>
-                 <img src="./Images/Car2.jpg" alt="">
-                  <div class="car-info">
+                    <img src="./Images/SPORTS3.png" alt="">
+                    <div class="car-info">
                         <h3>Maruti Suzuki Model 800- </h3>
                         <div class="car-price">
-                       <p>Price: $35,000</p>
-                        <p>Color: White,Black</p>
+                            <p>Price: $32,000</p>
+                            <p>Color: White,Black</p>
                         </div>
-                        <button class="learn-more">Check For More Detail</button>
+                       <a href="./Car6.html"><button class="learn-more">Check For Details</button></a>
                     </div>
-                 
+                 </div>
+        </div>
+         
+
+  
+
+  <!-- Electric Car Cards --> 
+  <div class="card-section" id="electric">
+    <div class="car-item fade-in">
+                    <div class="car-price offer">
+                        <button onclick="open_Form()">booking now</button>
+                        <p>20% off</p>
+                    </div>
+                    <img src="./Images/EV1.png" alt="">
+                    <div class="car-info">
+                        <h3>Voltrix E1 Nova- </h3>
+                        <div class="car-price">
+                            <p>Price: $50,000</p>
+                            <p>Color: White,Black</p>
+                        </div>
+                        <a href="./Car7.html"></a><button class="learn-more">Check For Details</button>
+                    </div>
+                </div>
+                <div class="car-item fade-in">
+                    <div class="car-price offer">
+                        <button onclick="open_Form()">booking now</button>
+                        <p>20% off</p>
+                    </div>
+                    <img src="./Images/EV2.png" alt="">
+                    <div class="car-info">
+                        <h3>Voltura NX5 Trail- </h3>
+                        <div class="car-price">
+                            <p>Price: $45,000</p>
+                            <p>Color: Blue,Black</p>
+                        </div>
+                        <a href="./Car8.html"><button class="learn-more">Check For Details</button></a>
+                    </div>
+                </div>
+                <div class="car-item fade-in">
+                    <div class="car-price offer">
+                        <button onclick="open_Form()">booking now</button>
+                        <p>20% off</p>
+                    </div>
+                    <img src="./Images/Car2.jpg" alt="">
+                    <div class="car-info">
+                        <h3>Aetheris X9 Shadow- </h3>
+                        <div class="car-price">
+                            <p>Price: $70,000</p>
+                            <p>Color: White,Black</p>
+                        </div>
+                        <a href="./Car9.html"><button class="learn-more">Check For Details</button></a>
+                    </div>
                 </div>
             </div>
+            
+            
+            <div class="popup_form" id="popup_Form">
+                     <div class="form_content" id="form_Content">
+                        <span class="close_btn" onclick="close_Form()">&times;</span>
+                        <h2>Fill up the required fields :</h2>
+
+
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" placeholder="Enter your Name" required>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="Enter your Email" required>
+                        <label for="location">Location*</label>
+                        <input type="text" id="location" placeholder="Enter your Location" required>
+                        <label for="credit">Debit Card Number*</label>
+                        <input type="text" id="credit" placeholder="XXXX-XXX-XXXX" required>
+                       
+                        
+
+                        <div class="Grouper">
+                        <label for="car_model">Car Model :</label>
+
+                        <select name="car_model" required>
+                            <option value="">Select a Car Model</option>
+                            <option value="model1">Toyota Land Cruiser J300 Series-</option>
+                            <option value="model2">Ford Endeavour Titanium Plus 3.2 4x4 AT- </option>
+                            <option value="model3">Vortek NX-7 UrbanDrive-  </option>
+                            <option value="model4">Toyota Supra Second Gen A60- </option>
+                            <option value="model5">Chiron Sport "Les Légendes du Ciel"- </option>
+                            <option value="model6">Maruti Suzuki Model 800- </option>
+                            <option value="model7">Voltrix E1 Nova- </option>
+                            <option value="model8">Voltura NX5 Trail- </option>
+                            <option value="model9">Aetheris X9 Shadow- </option>
+                        </select>
+                        </div>
+                        <button onclick="submit_Form()">Send Application</button>
+                    </div>
+
+                    <div class="success_content" id="success_Content" style="display: none;">
+                        <span class="close_btn" onclick="close_Form()">&times;</span>
+                        <div class="done_icon_container">
+                            <img src="./Images/done-icon.png" alt="">
+                        </div>
+                        <h3> Application Sent!</h3>
+                        <p>Thank you for reaching out to us.<br>We'll get back to you soon.</p>
+                    </div>
+
+
+
+                </div>
+    </div>
+
         </section>
-        <section id="sec-4"  class="fade-in">
-                <div class="left-side">
+        <section id="sec-4" class="fade-in">
+            <div class="left-side">
                 <h2>Contact Us</h2>
                 <p>For inquiries, bookings, or more information about our luxury car services, please reach out to us
                     through the following channels.</p>
-                <div class="grouper">
-                <div>               
-                 <div class="contact-item">
-                    <div class="icon-container">
-                        <img src="./Images/icon5.png" alt="">
-                    </div>
-                    <div class="contact_info">
-                        <p>Phone</p>
-                        <p> +1 (555) 123-4567</p>
-                    </div>
-                </div>
                 
-                <div class="contact-item">
-                    <div class="icon-container">
-                        <img src="./Images/icon6.png" alt="">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="icon-container">
+                                <img src="./Images/icon5.png" alt="">
+                            </div>
+                            <div class="contact_info">
+                                <p>Phone</p>
+                                <p> +1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-container">
+                                <img src="./Images/icon6.png" alt="">
+                            </div>
+                            <div class="contact_info">
+                                <p>Email</p>
+                                <p>info@luxurycarrental.com</p>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="contact_info">
-                        <p>Email</p>
-                        <p>info@luxurycarrental.com</p>
-                    </div>
-                
-                </div>
-                </div>
-                 <div class="social-media">
+                    <div class="social-media">
                         <h3>Social Media</h3>
                         <div class="Social-icon">
-                            <a href="https://www.instagram.com/ak_shrest/"><img src="./Images/icon7.png" alt="Instagram"></a>
-                            <a href="https://www.facebook.com/Aakash.Shrestha.64"><img src="./Images/icon8.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/ak_shrest/"><img src="./Images/icon7.png"
+                                    alt="Instagram"></a>
+                            <a href="https://www.facebook.com/Aakash.Shrestha.64"><img src="./Images/icon8.png"
+                                    alt="Facebook"></a>
                             <a href="https://www.tiktok.com/@_skyz.z"><img src="./Images/icon9.png" alt="TikTok"></a>
                             <a href="https://web.whatsapp.com/"><img src="./Images/icon10.png" alt="Whatsapp"></a>
                             <a href="https://x.com/AakashShrest"><img src="./Images/icon11.png" alt="X"></a>
-                        </div> 
+                        </div>
                     </div>
                 </div>
-               </div>
-                <div class="right-side">
-                         <h2>Add Your details</h2>
-                         <form action="POST">
-                            <div class="Grouping">
-                            <div class="form-group">
-                             <label for="first-name">First Name*</label>
-                             <input type="text" id="first-name" placeholder="Bhupindra" required>
-                            </div>
-                            <div class="form-group">
-                             <label for="last-name">Last Name*</label>
-                             <input type="text" id="last-name" placeholder="Jogi" required>
-                            </div>
-                            </div>
-                            <div class="form-group ">
-                            <label for="email">Email*</label>
-                            <input type="email" id="email" placeholder="Enter your Email" required>
-                            </div>
-                            <div class="form-group">
-                            <label for="phone">Phone*</label>
-                            <input type="tel" id="phone" placeholder="Enter your Phone" required>
-                            </div>
-                            <div class="form-group Comment">
-                            <label for="message">Comment*</label>
-                            <textarea id="message" placeholder="Enter your Comment" required></textarea>
-                            </div>
-                            <button type="submit">Submit</button>
-                         </form>
+            </div>
+            <div class="right-side">
+                <h2>Add Your details</h2>
+                <form>
+                    <div class="Grouping">
+                        <div class="form-group">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" placeholder="Bhupindra" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" placeholder="Jogi" required>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="Enter your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone*</label>
+                        <input type="tel" id="phone" placeholder="Enter your Phone" required>
+                    </div>
+                    <div class="form-group Comment">
+                        <label for="message">Comment*</label>
+                        <textarea id="message" placeholder="Enter your Comment" required></textarea>
+                    </div>
+                    <button onclick="open_MSG()">Submit</button>
+                </form>
+
+                <div class="popup_msg" id="popup_MSG">
+                 <div class="success_msg" id="success_MSG" style="display: none;">
+                        <span class="close_btn" onclick="close_MSG()">&times;</span>
+                        <div class="done_icon_container">
+                            <img src="./Images/done-icon.png" alt="">
+                        </div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for contacting us.<br>We'll get back to you soon.</p>
+                    </div>
                 </div>
+
+            </div>
         </section>
     </main>
- <footer>
+    <footer>
         <div class="upper-footer">
             <div class="left-footer">
-              <h1 class="logo">NASR</h1>
-              <p>At NASR, we bring you the finest selection of luxury and performance vehicles. Experience innovation, speed, and elegance in every drive.</p>
+                <h1 class="logo">NASR</h1>
+                <p>At NASR, we bring you the finest selection of luxury and performance vehicles. Experience innovation,
+                    speed, and elegance in every drive.</p>
             </div>
-            <!-- <div class="Grouper"> -->
+           
             <div class="middle-footer">
                 <div class="footer-img">
-                            <a href="https://www.instagram.com/ak_shrest/"><img src="./Images/icon7.png" alt="Instagram"></a>
-                            <a href="https://www.facebook.com/Aakash.Shrestha.64"><img src="./Images/icon8.png" alt="Facebook"></a>
-                            <a href="https://www.tiktok.com/@_skyz.z"><img src="./Images/icon9.png" alt="TikTok"></a>
-                            <a href="https://web.whatsapp.com/"><img src="./Images/icon10.png" alt="Whatsapp"></a>
-                            <a href="https://x.com/AakashShrest"><img src="./Images/icon11.png" alt="X"></a> 
+                    <a href="https://www.instagram.com/ak_shrest/"><img src="./Images/icon7.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/Aakash.Shrestha.64"><img src="./Images/icon8.png"
+                            alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@_skyz.z"><img src="./Images/icon9.png" alt="TikTok"></a>
+                    <a href="https://web.whatsapp.com/"><img src="./Images/icon10.png" alt="Whatsapp"></a>
+                    <a href="https://x.com/AakashShrest"><img src="./Images/icon11.png" alt="X"></a>
                 </div>
-                 <ul class="nav-links-footer">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Products</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <ul class="nav-links-footer">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="right-footer">
@@ -273,15 +516,17 @@
         </div>
         <div class="lower-footer">
             <div class="">
-            <p>&copy; 2023 NASR. All rights reserved.</p>
+                <p>&copy; 2023 NASR. All rights reserved.</p>
             </div>
             <div class="">
-            <p>Privacy Policy | Terms of Service</p>
+                <p>Privacy Policy | Terms of Service</p>
             </div>
         </div>
-           
+
     </footer>
     <script src="./Nav-Bar.js"></script>
+    <script src="./index.js"></script>
+    
 </body>
 
 </html>

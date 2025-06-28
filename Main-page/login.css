@@ -76,6 +76,23 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 1200px) {
+    body {
+        padding: 0 10px;
+    }
+    .main {
+        width: 80vw;
+        margin: 24vh auto;
+    }
+    .profile {
+        width: 20%;
+        height: 20%;
+    }
+    .profile img {
+        width: 100%;
+        height: 100%;
+    }
+}
 .a{
     color: white;
 }footer a{
@@ -85,6 +102,8 @@ button:hover{
 .logo{
    font-family: "uuuuPermanent Marker", cursive;
 }
+
+
 
 footer{
    background: rgb(22, 22, 22);

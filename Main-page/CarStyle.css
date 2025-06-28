@@ -1,0 +1,380 @@
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.header
+{
+   color: black;
+   
+   padding: 0.5rem 3rem;
+   justify-content: space-between;
+   text-decoration: none;
+   display: flex;
+   flex-direction: row;
+   position: sticky;
+   top: 0rem ; 
+   z-index: 1;
+}
+
+.logo{
+   font-family: "Permanent Marker", cursive;
+   margin: 0.25rem;
+}
+
+
+ a,h1,p{
+   cursor: pointer;
+   text-decoration: none;
+   color: black;
+   
+}
+
+   a:hover{
+      
+      transition: all 2s;
+      text-decoration: underline;
+   }
+
+   .nav-links
+   {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      text-decoration: none;
+      gap: 1.5rem;
+   }
+   .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 3.5% 0 0 0;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: rgb(0, 0, 0);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+#why-choose-us{
+      font-size: 90%;
+   }
+
+.sign-up{
+      border: 0.01rem solid rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+      
+      background-image: linear-gradient(to right, black, rgb(59, 59, 59));
+      margin: 1.25rem 0 0 0;
+      height: 1.875rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem 1.25rem;
+      border-radius: 0.3125rem;
+      text-decoration: none;
+   }
+.Sign{
+   display: none;
+}
+.logo-container {
+   display: none;
+}
+
+@media (max-width: 791px) {
+    a,p {
+      color: white;
+   }
+   .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     height: 15%;
+     width: 15%;
+     margin: 5% auto 0;
+     text-align: center;
+   }
+   .logo-container img {
+     border-radius: 50%;
+     width: 100%;
+     height: 100%;
+   }
+   .Sign{
+      border: 0.01rem solid rgb(255, 255, 255);
+      color: white;
+      background-image: linear-gradient(to right, black, rgb(59, 59, 59));
+      margin: 1% auto 0 auto;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 3% 1%; ;
+      border-radius: 0.3125rem;
+      text-decoration: none;
+   }
+   .sign-li{
+      border: none;
+   }
+   .sign-up{
+      display: none;
+   }
+  .nav-links {
+    position: absolute;
+    padding: 2%;
+    top: 38px;
+    right: 8%;
+    background-color: #111;
+    flex-direction: column;
+    width: 80%;
+    
+    display: none;
+    box-shadow: 0px 0px 1px rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  .nav-links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   
+    padding: 0 0 1% 0;
+  }
+  
+  .nav-links.active {
+    display: flex;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+.car-info {
+    margin: 2% 0 0 5%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background: rgba(0, 0, 0, 0.207);
+    border-radius: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.wrapper {
+    display: flex;
+   
+    justify-content: space-between; 
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  
+}
+.car-info button{
+    background: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.car-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    width: 50%;
+}
+.car-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    
+}
+@media (max-width: 900px) {
+    body{
+        overflow: scroll;
+    }
+    .wrapper {
+        
+        flex-direction: column;
+        align-items: center;
+    }
+    .car-info {
+        width: 80%;
+        margin: 10% 0;
+        padding: 1rem;
+    }
+    .car-image-container {
+        margin-top: -8%;
+        width: 100%;
+    }
+}
+
+.popup-form {
+      display: none; 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+   .popup-form.active {
+      display: flex;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .popup-form.closing .form-content,
+    .popup-form.closing .success-content {
+      animation: scaleOut 0.3s ease forwards;
+    }
+    .form-content,.success-content {
+      background: rgb(26, 26, 26);
+      color: white;
+      padding: 2%;
+      border-radius: 10px;
+      position: relative;
+      width: 30%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: scaleIn 0.3s ease-in-out;
+    }
+   
+    .success-content h3 {
+      text-align: center;
+      color: rgb(50, 233, 50);
+    }
+
+    .success-content p {
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+    }
+    .done-icon-container {
+      width: 30%;
+      height: 30%;
+      margin: 2% auto;
+    }
+    .done-icon-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #706464;
+    }
+  
+    .form-content input, .form-content button {
+      background: rgba(255, 255, 255, 1);
+      width: 100%;
+      margin: 1% 0 1.5% 0;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .form-content select {
+      background: rgba(255, 255, 255, 1);
+      width: 70%;
+      float: right;
+      padding: 8px;
+      font-size: 14px;
+      margin: 1% 0;
+    }
+    
+    .car-model{
+      width: 70%;
+      margin: 1% 5%  0;
+      padding: 8px;
+      font-size: 14px;
+    }
+    .form-content button {
+      background: linear-gradient(to right, #1b1b1b, #303030);
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 5% 0 0 0;
+      padding: 3% 5%;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    .grouper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; 
+      margin: 1% 0;
+    }
+   
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes scaleOut {
+      from { transform: scale(1); opacity: 1; }
+      to { transform: scale(0.8); opacity: 0; }
+    }
+@media (max-width:900px) {
+   .popup-form {
+      
+      width: 100%;
+      height: 100%;
+      padding: 0;
+   }
+   .form-content, .success-content {
+      margin: auto;
+      width: 80%;
+      padding: 5%;
+   }
+   .done-icon-container {
+      width: 50%;
+      height: 50%;
+   }
+   .form-content input, .form-content button {
+      width: 100%;
+   }
+   .car-model {
+      width: 100%;
+   }
+}

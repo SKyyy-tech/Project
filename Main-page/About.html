@@ -34,13 +34,13 @@
             </div>
             <li><a href="./About.html" id="why-choose-us">Why choose us ?</a></li>
             <li><a href="index.html">Home</a></li>
-            <li><a href=".html">Products</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <lic= class="sign-li"><a href="./form.html" class="Sign">Sign Up Now</a></li>
+            <li><a href="index.html/#sec-3">Cars</a></li>
+            <li><a href="index.html/#sec-2">Services</a></li>
+            <li><a href="index.html/#sec-4">Contact</a></li>
+            <li class="sign-li"><a href="./form.html" class="Sign">Sign Up Now</a></li>
         </ul>
 
-        <button class="sign-up"><a href="./form.html">Sign Up Now</a></button>
+        <a href="./form.html"><button class="sign-up">Sign Up Now</button></a>
 
         <div class="hamburger">
             <span></span>
@@ -54,31 +54,43 @@
         <section id="sec-1">
             <h1>Why - Choose - Us</h1>
             <div class="stats-container">
+                <div class="wrapper">
+                    <div class="info">Sales</div>
                 <div class="stats a"><span class="stats-text a">
                         <p>Over 100,000+</p>
                     </span></div>
+                </div>
+                <div class="wrapper">
+                <div class="info">Partnership</div>
                 <div class="stats b"><span class="stats-text b">
                         <p>Over 1000+</p>
-                    </span></div>
+                  </span></div>
+                </div>
+                <div class="wrapper">
+                <div class="info">Branches</div>
                 <div class="stats c"><span class="stats-text c">
                         <p>Over 900+</p>
                     </span></div>
+                
+                </div>
+                <div class="wrapper">
+                <div class="info">Followers</div>
                 <div class="stats d"><span class="stats-text d">
                         <p>75k Following</p>
                     </span></div>
+                
+                </div>
+                <div class="wrapper">
+                <div class="info">Reviews</div>
                 <div class="stats e"><span class="stats-text e">
-                        <p>Reviews 90,000+</p>
+                        <p>90,000+ Reviews</p>
                     </span></div>
+                
+                </div>
             </div>
-            <div class="stats-info">
-                <div class="info">Sales</div>
-                <div class="info">Partnership</div>
-                <div class="info">Branches</div>
-                <div class="info">Popularity</div>
-                <div class="info">Trust</div>
-            </div>
+          
         </section>
-        <section id="sec-2">
+        <section id="sec-2" class="fade-in">
             <div class="about-container">
                 <h1>About Us</h1>
                 <p>We are a leading company in the industry, dedicated to providing top-notch products and services to
@@ -96,7 +108,7 @@
                     joining a family that puts your needs first.</p>
             </div>
         </section>
-        <section id="sec-3">
+        <section id="sec-3" class="fade-in">
             <div>
                 <h1>What people say about us -</h1>
                 <div class="reviews">
@@ -104,7 +116,7 @@
                         <div class="image-container">
                             <img src="./Images/face1.png" alt="Customer Image">
                         </div>
-                        <p>"I had an amazing experience with NASR! The staff was incredibly helpful and knowledgeable. I
+                        <p>"Btw I hav cancer and I had an amazing experience with NASR! The staff was incredibly helpful and knowledgeable. I
                             found the perfect car for my needs."</p>
                         <span>- Walter White</span>
                     </div>
@@ -112,19 +124,48 @@
                         <div class="image-container">
                             <img src="./Images/face2.png" alt="Customer Image">
                         </div>
-                        <p>"The service at NASR is top-notch. They made the buying process so easy and stress-free. I
-                            highly recommend them!"</p>
+                        <p>"HAW HAW HAW WOOF WOOF WOOF HAW HAW This Site is fire yo! I fr suggest ya buy for this site cuz its FIREEEEEEEE!HAW HAW WOOF"</p>
                         <span>- Darren Watkins Jr</span>
                     </div>
                     <div class="review">
                         <div class="image-container">
                             <img src="./Images/face3.png" alt="Customer Image">
                         </div>
-                        <p>"NASR has a great selection of vehicles and their customer service is outstanding. I will
-                            definitely be returning for my next car purchase."</p>
+                        <p>"Like i know the chemistry this site knows the Business amazing experience with NASR. I
+                            found the perfect car for my needs to cook meth. "</p>
                         <span>- Heisenberg</span>
                     </div>
                 </div>
+                <button  id="btn" onclick="openForm()">Leave A Review</button>
+                <div class="popup-form" id="popupForm">
+                     <div class="form-content" id="formContent">
+                        <span class="close-btn" onclick="closeForm()">&times;</span>
+                        <h2>Fill up the fields :</h2>
+
+
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" placeholder="Enter your Name" required>
+                        <label for="review">Review*</label>
+                        <textarea id="review" placeholder="Write your review here..." required></textarea>
+                       
+                        <button onclick="submitForm()">Submit</button>
+                    </div>
+
+                    <div class="success-content" id="successContent" style="display: none;">
+                        <span class="close-btn" onclick="closeForm()">&times;</span>
+                        <div class="done-icon-container">
+                            <img src="./Images/done-icon.png" alt="">
+                        </div>
+                        <h3> Message Sent!</h3>
+                        <p>Thank you for your feedback.<br>We are very grateful for it.</p>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
         </section>
     </main>
     <footer>
@@ -170,6 +211,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- </div> -->
         </div>
         <div class="lower-footer">
@@ -183,6 +225,7 @@
            
     </footer>
     <script src="./Nav-Bar.js"></script>
+    <script src="./about.js"></script>
 </body>
 
 </html>
