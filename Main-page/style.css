@@ -366,12 +366,14 @@ a,h1,p{
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       animation: scaleIn 0.3s ease-in-out;
     }
-   
+   .form-content label {
+      float: left;
+    }
     .success-content h3 {
       text-align: center;
       color: rgb(50, 233, 50);
     }
-
+    
     .success-content p {
       text-align: center;
       color: #ffffff;
@@ -469,6 +471,9 @@ a,h1,p{
    }
    .form-content input, .form-content button {
       width: 100%;
+   }
+   label {
+      float: left;
    }
    .car-model {
       width: 100%;
@@ -613,7 +618,7 @@ a,h1,p{
    margin: 1rem 1rem 1rem 0;
    padding: 0.5rem 0.5rem;
 }
-@media (max-width: 720px) {
+@media (max-width: 900px) {
    .popular-cars-header p{
       padding: 0;
       margin: 0;
