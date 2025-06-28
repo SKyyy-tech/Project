@@ -625,6 +625,9 @@ a,h1,p{
    .offer {
       width: 100%;
    }
+   label {
+     float: left;
+   }
    .car-item {
       width: 90%;
       margin: 1rem auto;
@@ -741,6 +744,28 @@ a,h1,p{
       justify-content: space-between; 
       margin: 1% 0;
     }
+    @media (max-width:900px) {
+      .popup_form {
+         width: 100%;
+         height: 100%;
+         padding: 0;
+      }
+      .form_content, .success_content {
+         margin: auto;
+         width: 80%;
+         padding: 5%;
+      }
+      .done_icon_container {
+         width: 50%;
+         height: 50%;
+      }
+      .form_content input, .form_content button {
+         width: 100%;
+      }
+      .car_model {
+         width: 100%;
+      }
+   }
 
    
 #sec-4{
